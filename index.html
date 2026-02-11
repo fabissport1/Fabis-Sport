@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Fabis Sport | Tienda de Zapatos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+header{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+nav{
+    background:#e63946;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+.container{
+    padding:20px;
+}
+
+h2{
+    margin-top:40px;
+}
+
+/* GRID PRODUCTOS */
+.products{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* TARJETA */
+.card{
+    background:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.2);
+    text-align:center;
+    
+}
+
+/* SLIDER */
+.slider{
+    position:relative;
+    width:100%;
+    max-height:300px; /* puedes ajustar la altura */
+    overflow:hidden;
+    background:#fff; /* evita fondo negro si la imagen es angosta */
+}
+
+.slider img{
+    width:100%;
+    height:auto;          /* clave */
+    max-height:300px;     /* mantiene uniformidad */
+    object-fit:contain;   /* muestra la imagen completa */
+    display:none;
+}
+
+
+.slider img.active{
+    display:block;
+}
+
+
+/* BOTONES SLIDER */
+.slider button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    padding:5px 10px;
+    cursor:pointer;
+}
+
+.prev{ left:5px; }
+.next{ right:5px; }
+
+.price{
+    color:#e63946;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#111;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#e63946;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+<!-- ================== Encabezado ================== -->
+
+<header>
+    <h1>FABIS SPORT</h1>
+    <p>Distribuidores Everlast, Run King y más</p>
+</header>
+
+<nav>
+    <a href="#hombre">Hombre</a>
+    <a href="#mujer">Mujer</a>
+    <a href="https://wa.link/u6bftk" target="_blank">Contacto</a>
+</nav>
+
+<div class="container">
+
+<!-- ================== HOMBRE ================== -->
+<h2 id="hombre">Zapatos para Hombre</h2>
+
+<div class="products">
+
+<!-- PRODUCTO EVERLAST -->
+<div class="card">
+    <div class="slider">
+        <img src="Everlast plomo.jpeg" class="active" >
+        <img src="Everlast plomo naranja.jpeg" >
+        <img src="Everlast gris.jpeg" >
+        <img src="Everlast negro .jpeg" >
+        <img src="Everlast negro blanco.jpeg" >
+        <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+        <button class="next" onclick="moveSlide(this,1)">❯</button>
+    </div>
+    <h3>Everlast Running </h3>
+    <span class="old-price">$65</span><br>
+    <span class="price">$47</span><br>
+    <a href="https://wa.link/u6bftk" class="btn">Comprar</a>
+</div>
+
+<!-- PRODUCTO RUN KING -->
+<div class="card">
+    <div class="slider">
+        <img src="runking.jpg" class="active">
+        <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+        <button class="next" onclick="moveSlide(this,1)">❯</button>
+    </div>
+    <h3>Run King</h3>
+    <span class="price">$43</span><br>
+    <a href="https://wa.link/u6bftk" class="btn">Comprar</a>
+</div>
+<!-- PRODUCTO West -->
+<div class="card">
+    <div class="slider">
+        <img src="runking.jpg" class="active">
+        <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+        <button class="next" onclick="moveSlide(this,1)">❯</button>
+    </div>
+    <h3>WEST PRO</h3>
+    <span class="price">$43</span><br>
+    <a href="https://wa.link/u6bftk" class="btn">Comprar</a>
+</div>
+
+</div>
+
+</div>
+
+<!-- ================== MUJER ================== -->
+<h2 id="mujer">Zapatos para Mujer</h2>
+
+<div class="products">
+<!-- ================== WEST ================== -->
+<div class="card">
+    <div class="slider">
+        <img src="everlast1.jpg" class="active">
+        <img src="everlast2.jpg">
+        <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+        <button class="next" onclick="moveSlide(this,1)">❯</button>
+    </div>
+    <h3>WEST Mujer</h3>
+    <span class="old-price">$60</span><br>
+    <span class="price">$45</span><br>
+    <a href="https://wa.link/u6bftk" class="btn">Comprar</a>
+</div>
+
+<!-- ================== Apolo ================== -->
+
+<div class="card">
+    <div class="slider">
+        <img src="everlast1.jpg" class="active">
+        <img src="everlast2.jpg">
+        <button class="prev" onclick="moveSlide(this,-1)">❮</button>
+        <button class="next" onclick="moveSlide(this,1)">❯</button>
+    </div>
+    <h3>Apolo Mujer</h3>
+    <span class="old-price">$60</span><br>
+    <span class="price">$45</span><br>
+    <a href="https://wa.link/u6bftk" class="btn">Comprar</a>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Fabis Sport - Contacto directo por WhatsApp
+</footer>
+
+<script>
+
+/*
+=========================================
+FUNCIÓN moveSlide(button, direction)
+=========================================
+Permite mover las imágenes del slider
+direction = 1  → siguiente
+direction = -1 → anterior
+*/
+
+function moveSlide(button, direction){
+
+    // Busca el contenedor slider del botón presionado
+    let slider = button.parentElement;
+
+    // Obtiene todas las imágenes dentro del slider
+    let images = slider.querySelectorAll("img");
+
+    // Encuentra la imagen activa
+    let currentIndex = 0;
+    images.forEach((img, index)=>{
+        if(img.classList.contains("active")){
+            currentIndex = index;
+        }
+    });
+
+    // Quita clase active
+    images[currentIndex].classList.remove("active");
+
+    // Calcula nueva posición
+    let newIndex = currentIndex + direction;
+
+    // Controla límites
+    if(newIndex < 0){
+        newIndex = images.length -1;
+    }
+    if(newIndex >= images.length){
+        newIndex = 0;
+    }
+
+    // Activa nueva imagen
+    images[newIndex].classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
