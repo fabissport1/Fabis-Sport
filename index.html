@@ -94,6 +94,29 @@ h2{
     padding:5px 10px;
     cursor:pointer;
 }
+.envios-banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    padding: 25px 0;
+}
+
+.envios-texto {
+    display: inline-block;
+    font-size: 45px;
+    font-weight: 900;
+    color: #e63946;
+    white-space: nowrap;
+    animation: moverTexto 5s linear infinite;
+}
+
+@keyframes moverTexto {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(60%); }
+    100% { transform: translateX(0); }
+}
+
+
 
 .prev{ left:5px; }
 .next{ right:5px; }
@@ -149,6 +172,13 @@ footer{
 
 <div class="container">
 
+<!-- ================== ENVIOS ================== -->
+
+<div class="envios-banner">
+    <h1> <span class="envios-texto">🚚 ENVÍOS A TODO ECUADOR 🚚</span></h1>
+</div>
+
+
 <!-- ================== HOMBRE ================== -->
 <h2 id="hombre">Zapatos para Hombre</h2>
 
@@ -166,8 +196,8 @@ footer{
         <button class="next" onclick="moveSlide(this,1)">❯</button>
     </div>
     <h3>Everlast Running </h3>
-    <span class="old-price">$65</span><br>
-    <span class="price">$47</span><br>
+    <span class="old-price">$80</span><br>
+    <span class="price">$60</span><br>
     <a href="https://wa.link/u6bftk" class="btn">Comprar</a>
 </div>
 
@@ -179,7 +209,7 @@ footer{
         <button class="next" onclick="moveSlide(this,1)">❯</button>
     </div>
     <h3>Run King</h3>
-    <span class="price">$43</span><br>
+    <span class="price">$45</span><br>
     <a href="https://wa.link/u6bftk" class="btn">Comprar</a>
 </div>
 <!-- PRODUCTO West -->
