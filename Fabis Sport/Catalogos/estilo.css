@@ -1,0 +1,52 @@
+/* Estilos generales de la página */
+body {
+    font-family: Arial, sans-serif; /* Fuente */
+    padding: 20px;                  /* Espacio interno */
+}
+
+header{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* Contenedor de los productos */
+.products {
+    display: grid;                      /* Diseño en cuadrícula */
+    grid-template-columns: repeat(5, 1fr); /* 5 productos por fila */
+    gap: 20px;                          /* Espacio entre productos */
+}
+
+/* Cada tarjeta de producto */
+.product {
+    border: 1px solid #ccc; /* Borde gris */
+    padding: 10px;          /* Espacio interno */
+    text-align: center;     /* Texto centrado */
+}
+
+/* Imagen del producto */
+.product img {
+    width: 100%;           /* Ocupa todo el ancho */
+    height: 150px;         /* Altura fija */
+    object-fit: cover;     /* Recorta sin deformar */
+}
+
+/* Contenedor de botones de paginación */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Botones de paginación */
+.pagination button {
+    margin: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Botón activo (página actual) */
+.pagination button.active {
+    background-color: black;
+    color: white;
+}
